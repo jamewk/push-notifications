@@ -43,6 +43,7 @@ app.post('/send-notification', async (req, res) => {
         type: 'multicast',
         successCount: response.successCount,
         failureCount: response.failureCount,
+        responses: response.responses
       });
     } else {
       return res.status(400).json({
